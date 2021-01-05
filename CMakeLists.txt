@@ -12,6 +12,7 @@ project(OSM_A_star_search)
 set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib")
 
 # Locate project prerequisites
+# set(io2d_DIR "/usr/local/include/io2d/")
 find_package(io2d REQUIRED)
 find_package(Cairo)
 find_package(GraphicsMagick)

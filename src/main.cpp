@@ -52,6 +52,20 @@ int main(int argc, const char **argv)
             osm_data = std::move(*data);
     }
     
+    float start_x, start_y, end_x, end_y;
+
+    std::cout<<"Enter x coord of the starting point :";
+    std::cin>>start_x;
+
+    std::cout<<"Enter y coord of the starting point :";
+    std::cin>>start_y;
+
+    std::cout<<"Enter x coord of the ending point :";
+    std::cin>>end_x;
+
+    std::cout<<"Enter y coord of the ending point :";
+    std::cin>>end_x;
+
     // TODO 1: Declare floats `start_x`, `start_y`, `end_x`, and `end_y` and get
     // user input for these values using std::cin. Pass the user input to the
     // RoutePlanner object below in place of 10, 10, 90, 90.
@@ -60,7 +74,7 @@ int main(int argc, const char **argv)
     RouteModel model{osm_data};
 
     // Create RoutePlanner object and perform A* search.
-    RoutePlanner route_planner{model, 10, 10, 90, 90};
+    RoutePlanner route_planner{model, start_x, start_y, end_x, end_y;
     route_planner.AStarSearch();
 
     std::cout << "Distance: " << route_planner.GetDistance() << " meters. \n";

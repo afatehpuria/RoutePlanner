@@ -1,6 +1,7 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+This repo is based off https://github.com/udacity/CppND-Route-Planning-Project. 
+It is intended to complete the route planner from the C++ Nanodegree provided by Udacity
 
 <img src="map.png" width="600" height="450" />
 

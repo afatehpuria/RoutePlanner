@@ -79,6 +79,17 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
     // Create path_found vector
     distance = 0.0f;
     std::vector<RouteModel::Node> path_found;
+    while (current_node != start_node )
+    {
+        path_found.push_back(*current_node);
+        distance += current_node->distance(*current_node->parent);
+        current_node = current_node->parent;
+
+    }
+    path_found.push_back(*start_node);
+    distance += current_node->distance(*start_node);
+    std::reverse(path_found.begin(),path_found.end());
+    
 
     // TODO: Implement your solution here.
 

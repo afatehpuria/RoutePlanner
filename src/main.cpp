@@ -64,7 +64,7 @@ int main(int argc, const char **argv)
     std::cin>>end_x;
 
     std::cout<<"Enter y coord of the ending point :";
-    std::cin>>end_x;
+    std::cin>>end_y;
 
     // Build Model.
     RouteModel model{osm_data};

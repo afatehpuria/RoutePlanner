@@ -57,6 +57,7 @@ RouteModel::Node *RoutePlanner::NextNode() {
     int sum = 0;
     int lSum = 0;
     RouteModel::Node *rPointer = nullptr;
+    // referred to the knowledgebase for the sort function below
     std::sort(open_list.begin(), open_list.end(), [](const auto &_1st, const auto &_2nd) 
     {return _1st -> h_value + _1st -> g_value < _2nd -> h_value + _2nd -> g_value;});
     rPointer = open_list[0];
